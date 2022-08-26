@@ -1,6 +1,6 @@
 # scrapper
 
-These python scripts are used for data analyzing in the SCRAPPY article
+These python scripts are used for data analysis and visualization in the SCRAPPY article
 
 ### Dependencies
 Python libraries: FlowCytometryTools numpy pandas matplotlib seaborn
@@ -8,7 +8,7 @@ Python libraries: FlowCytometryTools numpy pandas matplotlib seaborn
 FlowCytometryTools doesn't work with python3.10, so use 3.9, 3.8 etc
 
 ### Draw heatmaps
-1. Choose which heatmaps to draw and scales of heatmaps in the draw_parameters.txt
+1. Choose which heatmaps to draw and the scales of heatmaps in the draw_parameters.txt
 2. Choose which data to draw in the drugs_to_draw.txt
 3. Launch draw_heatmaps.py 
 
