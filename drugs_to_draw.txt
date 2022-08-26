@@ -1,0 +1,81 @@
+5FC rep1 C0
+5FC rep2 C0
+5FC rep3 C0
+5FC rep1 MIC/2
+5FC rep2 MIC/2
+5FC rep3 MIC/2
+5FC rep1 MIC
+5FC rep2 MIC
+5FC rep3 MIC
+Fluconazole rep1 C0
+Fluconazole rep2 C0
+Fluconazole rep3 C0
+Fluconazole rep1 MIC/2
+Fluconazole rep2 MIC/2
+Fluconazole rep3 MIC/2
+Fluconazole rep1 MIC
+Fluconazole rep2 MIC
+Fluconazole rep3 MIC
+Voriconazole rep1 C0
+Voriconazole rep2 C0
+Voriconazole rep3 C0
+Voriconazole rep1 MIC/2
+Voriconazole rep2 MIC/2
+Voriconazole rep3 MIC/2
+Voriconazole rep1 MIC
+Voriconazole rep2 MIC
+Voriconazole rep3 MIC
+Drug 11 rep1 C0
+Drug 11 rep2 C0
+Drug 11 rep3 C0
+Drug 11 rep1 MIC/2
+Drug 11 rep2 MIC/2
+Drug 11 rep3 MIC/2
+Drug 11 rep1 MIC
+Drug 11 rep2 MIC
+Drug 11 rep3 MIC
+Mercapto rep1 C0
+Mercapto rep2 C0
+Mercapto rep3 C0
+Mercapto rep1 MIC/2
+Mercapto rep3 MIC/2
+Mercapto rep2 MIC/2
+Mercapto rep1 MIC
+Mercapto rep2 MIC
+Mercapto rep3 MIC
+Mycosidine rep1 C0
+Mycosidine rep2 C0
+Mycosidine rep3 C0
+Mycosidine rep1 MIC/2
+Mycosidine rep2 MIC/2
+Mycosidine rep3 MIC/2
+Mycosidine rep1 MIC
+Mycosidine rep2 MIC
+Mycosidine rep3 MIC
+N3 rep1 C0
+N3 rep2 C0
+N3 rep3 C0
+N3 rep1 MIC/2
+N3 rep2 MIC/2
+N3 rep3 MIC/2
+N3 rep1 MIC
+N3 rep2 MIC
+N3 rep3 MIC
+SDS rep1 C0
+SDS rep2 C0
+SDS rep3 C0
+SDS rep1 MIC/2
+SDS rep2 MIC/2
+SDS rep3 MIC/2
+SDS rep1 MIC
+SDS rep2 MIC
+SDS rep3 MIC
+Tunicamycin rep1 C0
+Tunicamycin rep2 C0
+Tunicamycin rep3 C0
+Tunicamycin rep1 MIC/2
+Tunicamycin rep2 MIC/2
+Tunicamycin rep3 MIC/2
+Tunicamycin rep1 MIC
+Tunicamycin rep2 MIC
+Tunicamycin rep3 MIC

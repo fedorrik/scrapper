@@ -1,0 +1,55 @@
+drug	Gcv2	His7	Trp3	Aro2	Lys1	Hom2	Aro3	Car1	Sam4	Sui2	Gcv3	Rnr4	Pdc1	Pyc2	Tps3	Tsl1	Pgm2	Ald4	Hxk1	Pda1	Idp1	Tal1	Hxt3	Erg3	Pmi40	Hog1	Cwp1	Mdh2	Erg10	Lsc1	PDR5	Dur1	Uga1	Gpd2	Gpd1	Ahp1	Grx1	Uth1	Yhb1	Tsa1	Sod1	Trx2	Ssa2	Ssa1	Ssa4	Ypk1	Sti1	Bat2	Tdh1	Hsp12	Hsp104	Hsp78	Nth1	Sse1	Hsc82	Tps1	Nsr1	Pgk1	Hsp42	Aha1	Hsp26	Ydj1	Pre4	HTB2	BMH	BY4741
+Tunicamycin rep3 MIC/2										0.0																											1.0	0.0				-1.0																								0.0
+Tunicamycin rep3 MIC										0.0																											1.0	0.0				-1.0																								0.0
+5FC rep1 MIC/2										0.0															-1.0							0.0					0.0	0.0							-1.0	-1.0															0.0					0.0
+5FC rep1 MIC										0.0															-1.0							0.0					0.0	0.0							-1.0	-1.0															0.0					0.0
+5FC rep2 MIC/2										0.0																						0.0					-1.0	-1.0																												0.0
+5FC rep2 MIC										0.0																						0.0					-1.0	-1.0																												0.0
+5FC rep3 MIC/2										0.0																						0.0						0.0				-1.0																								0.0
+5FC rep3 MIC										0.0																						0.0						0.0				-1.0																								0.0
+Fluconazole rep1 MIC/2										0.0																												0.0																							0.0					0.0
+Fluconazole rep1 MIC										0.0																												0.0																							0.0					0.0
+Fluconazole rep2 MIC/2										0.0																												0.0																												0.0
+Fluconazole rep2 MIC										0.0																												0.0																												0.0
+Fluconazole rep3 MIC/2										0.0																												1.0																												0.0
+Fluconazole rep3 MIC										0.0																												1.0																												0.0
+Voriconazole rep1 MIC/2										0.0																												0.0																												0.0
+Voriconazole rep1 MIC										0.0																												0.0																												0.0
+Voriconazole rep2 MIC/2										0.0																												0.0																												0.0
+Voriconazole rep2 MIC										0.0																												0.0																												0.0
+Voriconazole rep3 MIC/2										0.0																												0.0																							1.0					0.0
+Voriconazole rep3 MIC										0.0																												0.0																							1.0					0.0
+Drug 11 rep1 MIC/2										0.0																												0.0																												0.0
+Drug 11 rep1 MIC										0.0																												0.0																												0.0
+Drug 11 rep2 MIC/2										0.0																												0.0																							1.0					0.0
+Drug 11 rep2 MIC										0.0																												0.0																							1.0					0.0
+Drug 11 rep3 MIC/2										0.0																						0.0					0.0	0.0																												0.0
+Drug 11 rep3 MIC										0.0																						0.0					0.0	0.0																												0.0
+Mercapto rep1 MIC/2																																																																		0.0
+Mercapto rep1 MIC																																																																		0.0
+Mercapto rep2 MIC/2										0.0																						1.0						0.0																												0.0
+Mercapto rep2 MIC										0.0																						1.0						0.0																												0.0
+Mercapto rep3 MIC/2										0.0																						-1.0					1.0	0.0																							1.0					0.0
+Mercapto rep3 MIC										0.0																						-1.0					1.0	0.0																							1.0					0.0
+Mycosidine rep1 MIC/2										0.0																												0.0																												0.0
+Mycosidine rep1 MIC										0.0																												0.0																												0.0
+Mycosidine rep2 MIC/2										0.0																												0.0																							1.0					0.0
+Mycosidine rep2 MIC										0.0																												0.0																							1.0					0.0
+Mycosidine rep3 MIC/2										1.0																												1.0																												0.0
+Mycosidine rep3 MIC										1.0																												1.0																												0.0
+N3 rep1 MIC/2										0.0																												0.0																												0.0
+N3 rep1 MIC										0.0																												0.0																												0.0
+N3 rep2 MIC/2										1.0																												-1.0																												0.0
+N3 rep2 MIC										1.0																												-1.0																												0.0
+N3 rep3 MIC/2										0.0																												0.0																												0.0
+N3 rep3 MIC										0.0																												0.0																												0.0
+SDS rep1 MIC/2										0.0																												1.0																							1.0					0.0
+SDS rep1 MIC										0.0																												1.0																							1.0					0.0
+SDS rep2 MIC/2										0.0																												0.0																							0.0					0.0
+SDS rep2 MIC										0.0																												0.0																							0.0					0.0
+SDS rep3 MIC/2										0.0																												0.0																							-1.0					0.0
+SDS rep3 MIC										0.0																												0.0																							-1.0					0.0
+Tunicamycin rep1 MIC/2										0.0																												0.0				-1.0																								0.0
+Tunicamycin rep1 MIC										0.0																												0.0				-1.0																								0.0
+Tunicamycin rep2 MIC/2										1.0																												0.0				0.0																								0.0
+Tunicamycin rep2 MIC										1.0																												0.0				0.0																								0.0

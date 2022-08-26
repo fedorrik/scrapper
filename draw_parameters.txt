@@ -1,0 +1,8 @@
+# which heatmaps to draw (insert "#" before the name of heatmap to not to draw it)
+fold change
+z-score
+dead percent
+# scales for heatmaps
+fc 3
+z 75
+dead 50
