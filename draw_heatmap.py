@@ -61,9 +61,9 @@ with open('drugs_to_draw.txt') as f:
 with open('draw_parameters.txt') as f:
     draw_parameters = [line.strip() for line in f if line[0] != '#']
     # list with heatmaps to draw
-    heatmaps_to_draw = draw_parameters[:-3]
+    heatmaps_to_draw = draw_parameters[:-4]
     # dict with heatmap's scales
-    heatmaps_scales = {i.split()[0]: int(i.split()[1]) for i in draw_parameters[-3:]}
+    heatmaps_scales = {i.split()[0]: int(i.split()[1]) for i in draw_parameters[-4:-1]}
 
 # draw heatmaps
 if 'fold change' in heatmaps_to_draw:

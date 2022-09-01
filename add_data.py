@@ -12,9 +12,9 @@ def process_datadir_fc(drug, datadir, tubes):
     # init df with all fc
     drug_fc_df = pd.DataFrame(index=protein_ids, columns=['{} MIC/2'.format(drug), '{} MIC'.format(drug)])
     # read autoflu fsc files
-    autoflu_fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+'01-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-    autoflu_fcs_df_small = FCMeasurement(ID='2', datafile=datadir+'02-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-    autoflu_fcs_df_big = FCMeasurement(ID='3', datafile=datadir+'03-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
+    autoflu_fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+'01-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+    autoflu_fcs_df_small = FCMeasurement(ID='2', datafile=datadir+'02-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+    autoflu_fcs_df_big = FCMeasurement(ID='3', datafile=datadir+'03-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
     # calculate autoflu ratios
     autoflu_ratio_zero = np.median(autoflu_fcs_df_zero['FITC-A'] / autoflu_fcs_df_zero['FSC-A'])
     autoflu_ratio_small = np.median(autoflu_fcs_df_small['FITC-A'] / autoflu_fcs_df_small['FSC-A'])
@@ -30,9 +30,9 @@ def process_datadir_fc(drug, datadir, tubes):
         file_small = '02-Well-{}.fcs'.format(protein_id)
         file_big = '03-Well-{}.fcs'.format(protein_id)
         # reading these files using FlowCytometryTools library
-        fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+file_zero).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-        fcs_df_small = FCMeasurement(ID='2', datafile=datadir+file_small).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-        fcs_df_big = FCMeasurement(ID='3', datafile=datadir+file_big).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
+        fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+file_zero).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+        fcs_df_small = FCMeasurement(ID='2', datafile=datadir+file_small).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+        fcs_df_big = FCMeasurement(ID='3', datafile=datadir+file_big).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
         # calculating fitca/fsca ratios for each cell (smth like concentration of protein)
         ratio_zero = np.median(fcs_df_zero['FITC-A'] / fcs_df_zero['FSC-A'])
         ratio_small = np.median(fcs_df_small['FITC-A'] / fcs_df_small['FSC-A'])
@@ -70,9 +70,9 @@ def process_datadir_z(drug, datadir, tubes):
     # init df with all zscores
     drug_zscores_df = pd.DataFrame(index=protein_ids, columns=['{} MIC/2'.format(drug), '{} MIC'.format(drug)])
     # read autoflu fsc files
-    autoflu_fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+'01-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-    autoflu_fcs_df_small = FCMeasurement(ID='2', datafile=datadir+'02-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-    autoflu_fcs_df_big = FCMeasurement(ID='3', datafile=datadir+'03-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
+    autoflu_fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+'01-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+    autoflu_fcs_df_small = FCMeasurement(ID='2', datafile=datadir+'02-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+    autoflu_fcs_df_big = FCMeasurement(ID='3', datafile=datadir+'03-Well-F7.fcs').data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
     # calculate autoflu ratios
     autoflu_ratio_zero = autoflu_fcs_df_zero['FITC-A'] / autoflu_fcs_df_zero['FSC-A']
     autoflu_ratio_small = autoflu_fcs_df_small['FITC-A'] / autoflu_fcs_df_small['FSC-A']
@@ -84,9 +84,9 @@ def process_datadir_z(drug, datadir, tubes):
         file_small = '02-Well-{}.fcs'.format(protein_id)
         file_big = '03-Well-{}.fcs'.format(protein_id)
         # reading these files using FlowCytometryTools library
-        fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+file_zero).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-        fcs_df_small = FCMeasurement(ID='2', datafile=datadir+file_small).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
-        fcs_df_big = FCMeasurement(ID='3', datafile=datadir+file_big).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < 5000')
+        fcs_df_zero = FCMeasurement(ID='1', datafile=datadir+file_zero).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+        fcs_df_small = FCMeasurement(ID='2', datafile=datadir+file_small).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
+        fcs_df_big = FCMeasurement(ID='3', datafile=datadir+file_big).data.rename({'PE-A': 'PE'}, axis='columns').query('PE < {}'.format(threshold))
         # calculating fitca/fsca ratios for each cell (smth like concentration of protein)
         ratio_zero = fcs_df_zero['FITC-A'] / fcs_df_zero['FSC-A']
         ratio_small = fcs_df_small['FITC-A'] / fcs_df_small['FSC-A']
@@ -117,13 +117,17 @@ def process_datadir_dead(drug, datadir, tubes):
         fcs_df_big = FCMeasurement(ID='3', datafile=datadir+file_big).data.rename({'PE-A': 'PE'}, axis='columns')
         # count percent of live cells and put in df
         if len(fcs_df_zero) > 0:
-            live_percent_df.loc[protein_id, '{} C0'.format(drug)] = len(fcs_df_zero.query('PE >= 5000')) / len(fcs_df_zero)
+            live_percent_df.loc[protein_id, '{} C0'.format(drug)] = len(fcs_df_zero.query('PE >= {}'.format(threshold))) / len(fcs_df_zero)
         if len(fcs_df_small) > 0:
-            live_percent_df.loc[protein_id, '{} MIC/2'.format(drug)] = len(fcs_df_small.query('PE >= 5000')) / len(fcs_df_small)
+            live_percent_df.loc[protein_id, '{} MIC/2'.format(drug)] = len(fcs_df_small.query('PE >= {}'.format(threshold))) / len(fcs_df_small)
         if len(fcs_df_big) > 0:
-            live_percent_df.loc[protein_id, '{} MIC'.format(drug)] = len(fcs_df_big.query('PE >= 5000')) / len(fcs_df_big)
+            live_percent_df.loc[protein_id, '{} MIC'.format(drug)] = len(fcs_df_big.query('PE >= {}'.format(threshold))) / len(fcs_df_big)
     return live_percent_df
 
+
+# read PE-A threshold
+with open('draw_parameters.txt') as f:
+    threshold = [line.strip() for line in f if line[0] != '#'][-1]
 
 # associate proteins with plate tubes
 df_proteins = pd.read_csv('plate.txt', sep=' ', index_col=0, names=['tube', 'protein'])
