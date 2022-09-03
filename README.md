@@ -19,6 +19,6 @@ FlowCytometryTools doesn't work with python3.10, so use 3.9, 3.8 etc
 - 02-Well-{tube}.fcs for MIC/2; 
 - 03-Well-{tube}.fcs for MIC
 3. Launch add_data.py
-- If drug you trying to add already exist in the data file scrapper will ask you if you want to a.overwrite or b.skip it. Type a or b and press Enter to choose.
+- If drug you trying to add already exist in the data files scrapper will ask you if you want to a.overwrite or b.skip it. Type a or b and press Enter to choose.
 
 Author: Fedor Ryabov, fedorrik1@gmail.com
