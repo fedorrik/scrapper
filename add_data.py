@@ -2,9 +2,10 @@ import numpy as np
 import pandas as pd
 from FlowCytometryTools import FCMeasurement
 from os import listdir
+from sys import exit
 
 
-def process_datadir_fc(drug, datadir, tubes):
+def process_datadir_fc(drug, datadir, tubes, threshold):
     # take all fcs files in datadir except F8 and E2 (PNC1)
     fcs_files = [fcs for fcs in listdir(datadir) if fcs[-4:] == '.fcs' and fcs.split('.')[0].split('-')[-1] in tubes]
     # take all tubes protein_id in datadir
@@ -62,7 +63,7 @@ def ztest_medians(a, b, a_autoflu, b_autoflu):
     z = (x1 - x2) / np.sqrt(q1**2 + q2**2)
     return z
 
-def process_datadir_z(drug, datadir, tubes):
+def process_datadir_z(drug, datadir, tubes, threshold):
     # take all fcs files in datadir except F8 and E2 (PNC1)
     fcs_files = [fcs for fcs in listdir(datadir) if fcs[-4:] == '.fcs' and fcs.split('.')[0].split('-')[-1] in tubes]
     # take all tubes protein_id in datadir
@@ -98,7 +99,7 @@ def process_datadir_z(drug, datadir, tubes):
         drug_zscores_df.loc[protein_id] = zscore_small, zscore_big
     return drug_zscores_df
 
-def process_datadir_dead(drug, datadir, tubes):
+def process_datadir_dead(drug, datadir, tubes, threshold):
     # take all fcs files in datadir except F8 and E2 (PNC1)
     fcs_files = [fcs for fcs in listdir(datadir) if fcs[-4:] == '.fcs' and fcs.split('.')[0].split('-')[-1] in tubes]
     # take all tubes protein_id in datadir
@@ -124,14 +125,27 @@ def process_datadir_dead(drug, datadir, tubes):
             live_percent_df.loc[protein_id, '{} MIC'.format(drug)] = len(fcs_df_big.query('PE >= {}'.format(threshold))) / len(fcs_df_big)
     return live_percent_df
 
+def delete_from_data(data, drugs_to_delete):
+    if len(drugs_to_delete) > 0:
+        data = data.drop([drug + ' MIC' for drug in drugs_to_delete])
+        data = data.drop([drug + ' MIC/2' for drug in drugs_to_delete])
+        # drop C0 from dead df
+        if  'C0' in ' '.join(data.index):
+            data = data.drop([drug + ' C0' for drug in drugs_to_delete])
+    return data
+    
 
 # read PE-A threshold
-with open('draw_parameters.txt') as f:
+with open('parameters.txt') as f:
     threshold = [line.strip() for line in f if line[0] != '#'][-1]
 
 # associate proteins with plate tubes
 df_proteins = pd.read_csv('plate.txt', sep=' ', index_col=0, names=['tube', 'protein'])
 tubes = df_proteins.index
+
+# read all_drugs.txt
+with open('all_drugs.txt') as f:
+	all_drugs = [' '.join(line.strip().split()[:-1]) for line in f]
 
 # read drugs_to_add.txt
 with open('drugs_to_add.txt') as f:
@@ -142,10 +156,42 @@ with open('drugs_to_add.txt') as f:
         drug_name, drug_path = line.strip().split('\t')
         drugs_to_add[drug_name] = drug_path
 
+# check if any new drag already exist in a data
+drugs_to_delete = []
+drugs_to_skip = []
+for drug_name in drugs_to_add:
+    if drug_name in all_drugs:
+        print('{} already exist in the data files. Would you like to a.overwrite or b.skip? a/b'.format(drug_name))
+        while True:
+            answer = input('Type a or b and press Enter: ')
+            if answer == 'a':
+                # add drug to list to remove it from data
+                drugs_to_delete.append(drug_name)
+                break
+            elif answer == 'b':
+                # add drug to list to remove it from drugs_to_add dict
+                drugs_to_skip.append(drug_name)
+                break
+            else:
+                pass
+
+# remove drug which want to skip from drugs_to_add dict
+if len(drugs_to_skip) > 0:
+    for drug in drugs_to_skip:
+        drugs_to_add.pop(drug)
+
+# exit script if nothing to add
+if len(drugs_to_add) == 0:
+    print('Nothing to add')
+    exit()
+
 ### FOLD CHANGE ###
 # read databases
 fc_data = pd.read_csv('data/data.fc.tsv', sep='\t').set_index('drug')
 problems_data = pd.read_csv('data/data.fc-prblms.tsv', sep='\t').set_index('drug')
+# delete drugs
+fc_data = delete_from_data(fc_data, drugs_to_delete)
+problems_data = delete_from_data(problems_data, drugs_to_delete)
 # problemic dicts
 empty_control_dict = {}
 empty_small_dict = {}
@@ -158,7 +204,7 @@ for drug_name in drugs_to_add:
         drug_path += '/'
     # processing files
     fc_data_to_add = df_proteins.copy()
-    fc_df, empty_control, empty_small, empty_big = process_datadir_fc(drug_name, drug_path, tubes)
+    fc_df, empty_control, empty_small, empty_big = process_datadir_fc(drug_name, drug_path, tubes, threshold)
     fc_data_to_add = pd.concat([fc_data_to_add, fc_df], axis=1)
     fc_data_to_add = fc_data_to_add.set_index('protein').T
     # log fc data
@@ -202,6 +248,8 @@ problems_data.to_csv('data/data.fc-prblms.tsv', sep='\t', index_label='drug')
 ### Z-SCORE ###
 # read data.tsv
 data = pd.read_csv('data/data.z.tsv', sep='\t').set_index('drug')
+# delete drugs
+data = delete_from_data(data, drugs_to_delete)
 # counting
 for drug_name in drugs_to_add:
     drug_path = drugs_to_add[drug_name]
@@ -210,7 +258,7 @@ for drug_name in drugs_to_add:
         drug_path += '/'
     # processing files
     data_to_add = df_proteins.copy()
-    drug_zscores_df = process_datadir_z(drug_name, drug_path, tubes)
+    drug_zscores_df = process_datadir_z(drug_name, drug_path, tubes, threshold)
     data_to_add = pd.concat([data_to_add, drug_zscores_df], axis=1)
     data_to_add = data_to_add.set_index('protein').T
     # merge to data
@@ -223,6 +271,8 @@ data.to_csv('data/data.z.tsv', sep='\t', index_label='drug')
 ### DEAD CELLS ###
 # read data.tsv
 data = pd.read_csv('data/data.dead.tsv', sep='\t').set_index('drug')
+# delete drugs
+data = delete_from_data(data, drugs_to_delete)
 # counting
 for drug_name in drugs_to_add:
     drug_path = drugs_to_add[drug_name]
@@ -231,7 +281,7 @@ for drug_name in drugs_to_add:
         drug_path += '/'
     # processing files
     data_to_add = df_proteins.copy()
-    drug_zscores_df = process_datadir_dead(drug_name, drug_path, tubes)
+    drug_zscores_df = process_datadir_dead(drug_name, drug_path, tubes, threshold)
     data_to_add = pd.concat([data_to_add, drug_zscores_df], axis=1)
     data_to_add = data_to_add.set_index('protein').T
     # merge to data
@@ -242,3 +292,4 @@ data.to_csv('data/data.dead.tsv', sep='\t', index_label='drug')
 # write drug names
 with open('all_drugs.txt', 'w') as f:
     f.write('\n'.join(data.index))
+

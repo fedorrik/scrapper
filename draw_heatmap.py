@@ -58,7 +58,7 @@ def draw_dead_heatmap(drugs_to_draw, scale):
 with open('drugs_to_draw.txt') as f:
     # list with drugs to draw
     drugs_to_draw = [line.strip() for line in f if line[0] != '#']
-with open('draw_parameters.txt') as f:
+with open('parameters.txt') as f:
     draw_parameters = [line.strip() for line in f if line[0] != '#']
     # list with heatmaps to draw
     heatmaps_to_draw = draw_parameters[:-4]
@@ -79,3 +79,4 @@ if 'dead percent' in heatmaps_to_draw:
     draw_dead_heatmap(drugs_to_draw, heatmaps_scales['dead'])
 
 print('Heatmaps are drawn. Check heatmaps folder')
+
