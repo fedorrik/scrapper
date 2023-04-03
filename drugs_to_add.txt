@@ -1,27 +1,35 @@
-5FC rep1	/storage/Bioinformatic/CytoFlex/Eslam/5FC/06.08.2021 #5FC/06.08.2021 drug #5FC
-5FC rep2	/storage/Bioinformatic/CytoFlex/Eslam/5FC/08.07.2021 #5FC/08.07.2021 drug #5FC
-5FC rep3	/storage/Bioinformatic/CytoFlex/Eslam/5FC/24.05.2022 #5FC/24.05.2022 #5FC
-Fluconazole rep1	/storage/Bioinformatic/CytoFlex/Eslam/Fluconazole/03.04.2021 fluconazole/03.04.2021 fluconazole
-Fluconazole rep2	/storage/Bioinformatic/CytoFlex/Eslam/Fluconazole/04.04.2021 drug fluconazole/04.04.2021 fluconazole
-Fluconazole rep3	/storage/Bioinformatic/CytoFlex/Eslam/Fluconazole/12.04.2022 fluconazol/12.04.2022 fluconazol
-Voriconazole rep1	/storage/Bioinformatic/CytoFlex/Eslam/Voriconazole/13.04.2022 voriconazole/13.04.2022 voriconazole
-Voriconazole rep2	/storage/Bioinformatic/CytoFlex/Eslam/Voriconazole/14.04.2021 voriconazole/14.04.2021 voriconazole
-Voriconazole rep3	/storage/Bioinformatic/CytoFlex/Eslam/Voriconazole/15.04.2021 voriconazole/15.04.2021 voriconazole
-Drug 11 rep1	/storage/Bioinformatic/CytoFlex/Eslam/11/01.04.2021 drug 11/01.04.2021 drug 11
-Drug 11 rep2	/storage/Bioinformatic/CytoFlex/Eslam/11/02.04.2021 drug 11/02.04.2021 drug 11
-Drug 11 rep3	/storage/Bioinformatic/CytoFlex/Eslam/11/05.04.20222 drug 11/05.04.20222 drug 11
-Mercapto rep1	/storage/Bioinformatic/CytoFlex/Eslam/Mercapto/04.04.2022 mercapto/04.04.2022 mercapto
-Mercapto rep2	/storage/Bioinformatic/CytoFlex/Eslam/Mercapto/08.09.2021 mercapto/08.09.2021 mercapto
-Mercapto rep3	/storage/Bioinformatic/CytoFlex/Eslam/Mercapto/10.09.2021 mercapto/10.09.2021 mercapto
-Mycosidine rep1	/storage/Bioinformatic/CytoFlex/Eslam/Mycosidine/24.06.2021drug #N1/24.06.2021drug #N1
-Mycosidine rep2	/storage/Bioinformatic/CytoFlex/Eslam/Mycosidine/25.06.2021 drug #N1/25.06.2021 drug #N1
-Mycosidine rep3	/storage/Bioinformatic/CytoFlex/Eslam/Mycosidine/Mycosidine/23.05.2022 mycosidine
-N3 rep1	/storage/Bioinformatic/CytoFlex/Eslam/N3/25.05.2022 drug #N3/25.05.2022 drug #N3
-N3 rep2	/storage/Bioinformatic/CytoFlex/Eslam/N3/26.06.2021 drug #N3/26.06.2021 drug #N3
-N3 rep3	/storage/Bioinformatic/CytoFlex/Eslam/N3/27.06.2021 drug #N3/27.06.2021 drug #N3
-SDS rep1	/storage/Bioinformatic/CytoFlex/Eslam/SDS/sds 09.04.2021/Exp_20210409_1
-SDS rep2	/storage/Bioinformatic/CytoFlex/Eslam/SDS/sds 10.04.2021/SDS 10.04.2021
-SDS rep3	/storage/Bioinformatic/CytoFlex/Eslam/SDS/sds 11.04.2021/sds11.04.2021
-Tunicamycin rep1	/storage/Bioinformatic/CytoFlex/Eslam/Tunicamycin/16.04.2022/16.04.2022 turikamycin
-Tunicamycin rep2	/storage/Bioinformatic/CytoFlex/Eslam/Tunicamycin/26.04.2022/26.04.2022 turikamycin
-Tunicamycin rep3	/storage/Bioinformatic/CytoFlex/Eslam/Tunicamycin/30.04.2022/30.04.2022 turikamycin
+Flu rep1	/home/fedor/Downloads/big_data/scrappy_data/Flu/2022.04.12
+Flu rep2	/home/fedor/Downloads/big_data/scrappy_data/Flu/2021.04.04
+Flu rep3	/home/fedor/Downloads/big_data/scrappy_data/Flu/2021.04.03
+Vor rep1	/home/fedor/Downloads/big_data/scrappy_data/Vor/2021.04.14
+Vor rep2	/home/fedor/Downloads/big_data/scrappy_data/Vor/2021.04.15
+Vor rep3	/home/fedor/Downloads/big_data/scrappy_data/Vor/2022.04.13
+SDS rep1	/home/fedor/Downloads/big_data/scrappy_data/SDS/2021.04.09
+SDS rep2	/home/fedor/Downloads/big_data/scrappy_data/SDS/2021.04.10
+SDS rep3	/home/fedor/Downloads/big_data/scrappy_data/SDS/2021.04.11
+11326083 rep1	/home/fedor/Downloads/big_data/scrappy_data/11326083/2021.04.01
+11326083 rep2	/home/fedor/Downloads/big_data/scrappy_data/11326083/20222.04.05
+11326083 rep3	/home/fedor/Downloads/big_data/scrappy_data/11326083/2021.04.02
+MP rep1	/home/fedor/Downloads/big_data/scrappy_data/MP/2021.09.08
+MP rep2	/home/fedor/Downloads/big_data/scrappy_data/MP/2021.09.10
+MP rep3	/home/fedor/Downloads/big_data/scrappy_data/MP/2022.04.04
+Mycosidine rep1	/home/fedor/Downloads/big_data/scrappy_data/Mycosidine/2021.06.25
+Mycosidine rep2	/home/fedor/Downloads/big_data/scrappy_data/Mycosidine/2022.05.23
+Mycosidine rep3	/home/fedor/Downloads/big_data/scrappy_data/Mycosidine/2021.06.24
+3B-Myc rep1	/home/fedor/Downloads/big_data/scrappy_data/3B-Myc/2021.06.26
+3B-Myc rep2	/home/fedor/Downloads/big_data/scrappy_data/3B-Myc/2021.06.27
+3B-Myc rep3	/home/fedor/Downloads/big_data/scrappy_data/3B-Myc/2022.05.25
+Tunicamycin rep1	/home/fedor/Downloads/big_data/scrappy_data/Tunicamycin/2022.04.30
+Tunicamycin rep2	/home/fedor/Downloads/big_data/scrappy_data/Tunicamycin/2022.04.16
+Tunicamycin rep3	/home/fedor/Downloads/big_data/scrappy_data/Tunicamycin/2022.04.26
+5-FC rep1	/home/fedor/Downloads/big_data/scrappy_data/5-FC/2021.07.08
+5-FC rep2	/home/fedor/Downloads/big_data/scrappy_data/5-FC/2022.05.24
+5-FC rep3	/home/fedor/Downloads/big_data/scrappy_data/5-FC/2021.08.06
+Ala-54 rep1	/home/fedor/Downloads/big_data/scrappy_data/Ala-54/2021.09.06
+Ala-54 rep2	/home/fedor/Downloads/big_data/scrappy_data/Ala-54/2021.09.03
+SOV-4 rep1	/home/fedor/Downloads/big_data/scrappy_data/SOV-4/2021.07.28
+SOV-4 rep2	/home/fedor/Downloads/big_data/scrappy_data/SOV-4/2023.03.15
+SOV-4 rep3	/home/fedor/Downloads/big_data/scrappy_data/SOV-4/2021.07.27
+SOV-8 rep1	/home/fedor/Downloads/big_data/scrappy_data/SOV-8/2021.08.05
+SOV-8 rep2	/home/fedor/Downloads/big_data/scrappy_data/SOV-8/2021.08.03
+SOV-8 rep3	/home/fedor/Downloads/big_data/scrappy_data/SOV-8/2021.08.02

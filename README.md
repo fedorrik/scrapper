@@ -21,4 +21,9 @@ FlowCytometryTools doesn't work with python3.10, so use 3.9, 3.8 etc
 3. Launch add_data.py
 - If drug you trying to add already exist in the data files scrapper will ask you if you want to a.overwrite or b.skip it. Type a or b and press Enter to choose.
 
+### Additions
+1. `reorder_proteins.py` in `data` directory performs small rearrangement in data to make heatmaps more appropriate
+2. `mean` directory is literaly one more copy of scrapper (w/o adding data functional) design to draw heatmap by mean values of 3 repetitions. `mean_data.py` gives datatables with mean values based on original datatables
+
 Author: Fedor Ryabov, fedorrik1@gmail.com
+

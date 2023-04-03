@@ -28,7 +28,7 @@ C3 Cwp1
 C4 Mdh2
 C5 Erg10
 C6 Lsc1
-C7 PDR5
+C7 Pdr5
 C8 Dur1
 C9 Uga1
 C10 Gpd2
@@ -61,6 +61,6 @@ F1 Aha1
 F2 Hsp26
 F3 Ydj1
 F4 Pre4
-F5 HTB2
-F6 BMH
+F5 Htb2
+F6 Bmh1
 F7 BY4741
