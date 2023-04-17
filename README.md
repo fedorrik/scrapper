@@ -23,7 +23,8 @@ FlowCytometryTools doesn't work with python3.10, so use 3.9, 3.8 etc
 
 ### Additions
 1. `reorder_proteins.py` in `data` directory performs small rearrangement in data to make heatmaps more appropriate
-2. `mean` directory is literaly one more copy of scrapper (w/o adding data functional) design to draw heatmap by mean values of 3 repetitions. `mean_data.py` gives datatables with mean values based on original datatables
+2. `scrapper_mean` directory is literaly one more copy of scrapper (w/o adding data functional) design to draw heatmap by mean values of 3 repetitions. `mean_data.py` gives datatables with mean values based on original datatables
+3. `scrapper_time` directory is literaly one more copy of scrapper which uses special dataset with different time btw adding drug to cells and flow cytometry
 
 Author: Fedor Ryabov, fedorrik1@gmail.com
 
