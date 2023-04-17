@@ -1,0 +1,9 @@
+Mycosidine 2h	/home/fedor/Downloads/big_data/scrappy_data_time/Mycosidine/2h.2022.12.12
+Mycosidine 3h	/home/fedor/Downloads/big_data/scrappy_data_time/Mycosidine/3h.2022.12.11
+Mycosidine 4h	/home/fedor/Downloads/big_data/scrappy_data_time/Mycosidine/4h.2022.12.12
+Mycosidine 6h	/home/fedor/Downloads/big_data/scrappy_data_time/Mycosidine/6h.2022.12.12
+Mycosidine 7h	/home/fedor/Downloads/big_data/scrappy_data_time/Mycosidine/7h.2022.12.11
+Tunicamycin 3h	/home/fedor/Downloads/big_data/scrappy_data_time/Tunicamycin/3h.2022.12.15
+Tunicamycin 4h	/home/fedor/Downloads/big_data/scrappy_data_time/Tunicamycin/4h.2022.12.14
+Tunicamycin 6h	/home/fedor/Downloads/big_data/scrappy_data_time/Tunicamycin/6h.2022.12.14
+Tunicamycin 7h	/home/fedor/Downloads/big_data/scrappy_data_time/Tunicamycin/7h.2022.12.15

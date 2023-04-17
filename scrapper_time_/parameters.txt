@@ -1,0 +1,10 @@
+# choose which heatmaps to draw (insert "#" before the name of heatmap to not to draw it) [for draw_heatmap.py]
+fold change
+z-score
+dead percent
+# choose scales for heatmaps [for draw_heatmap.py]
+fc 1
+z 50
+dead 10
+# choose PE-A threshold which will separate live and dead cells [for add_data.py]
+5000
