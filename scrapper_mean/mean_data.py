@@ -14,7 +14,7 @@ def get_mean_df(df_path):
         mean_small = pd.DataFrame(drug_data_small.mean(), columns=[drug + ' MIC/2']).T
         mean_data = pd.concat([mean_data, mean_big, mean_small])
     mean_data.index.name = 'drug'
-    mean_data.to_csv('data_mean/{}'.format(df_path.split('/')[-1]), sep='\t')
+    mean_data.to_csv('data/{}'.format(df_path.split('/')[-1]), sep='\t')
 
 def get_mean_df_dead(df_path):
     data = pd.read_csv(df_path, sep='\t').set_index('drug')
@@ -30,7 +30,7 @@ def get_mean_df_dead(df_path):
         mean_small = pd.DataFrame(drug_data_small.mean(), columns=[drug + ' MIC/2']).T
         mean_data = pd.concat([mean_data, mean_zero, mean_big, mean_small])
     mean_data.index.name = 'drug'
-    mean_data.to_csv('data_mean/{}'.format(df_path.split('/')[-1]), sep='\t')
+    mean_data.to_csv('data/{}'.format(df_path.split('/')[-1]), sep='\t')
 
 get_mean_df('../data/data.z.tsv')
 get_mean_df('../data/data.fc.tsv')
