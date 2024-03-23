@@ -3,7 +3,7 @@
 These python scripts are used for data analysis and visualization in the SCRAPPY article
 
 ### Dependencies
-Python libraries: FlowCytometryTools numpy pandas matplotlib seaborn
+Python libraries: FlowCytometryTools numpy pandas matplotlib seaborn scipy
 
 FlowCytometryTools doesn't work with python3.10, so use 3.9, 3.8 etc
 
